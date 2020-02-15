@@ -4,7 +4,7 @@ import java.net.Socket;
 public class Client {
 
     public static void main(String[] arg) {
-
+        final String QUIT = "quit";
         final String DEFAULT_SERVER_HOST = "127.0.0.1";
         final int DEFAULT_SERVER_PORT = 8888;
         Socket socket = null;
@@ -26,15 +26,23 @@ public class Client {
             BufferedReader consoleReader = new BufferedReader(
                     new InputStreamReader(System.in)
             );
-            String input = consoleReader.readLine();
+            while (true) {
+                String input = consoleReader.readLine();
 
-            // send to server
-            writer.write(input + "\n");
-            writer.flush();
+                // send to server
+                writer.write(input + "\n");
+                writer.flush();
 
-            //read the msg for server
-            String msg = reader.readLine();
-            System.out.println(msg);
+                //read the msg for server
+                String msg = reader.readLine();
+                System.out.println(msg);
+
+                //check if the user quit
+                if (QUIT.equals(input)) {
+                    break;
+                }
+            }
+
         } catch (IOException e) {
             e.printStackTrace();
         } finally {

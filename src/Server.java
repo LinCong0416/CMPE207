@@ -5,6 +5,7 @@ import java.net.Socket;
 public class Server {
 
     public static void main(String[] args) {
+        final String QUIT = "quit";
         final int DEFAULT_PORT = 8888;
         ServerSocket serverSocket = null;
 
@@ -25,12 +26,17 @@ public class Server {
                         new OutputStreamWriter(socket.getOutputStream())
                 );
                 // read the msg from client
-                String msg = reader.readLine();
-                if (msg != null) {
+                String msg = null;
+                while ((msg = reader.readLine()) != null) {
                     System.out.println("Client Port [" + socket.getPort()+"]:" + msg);
                     //response
-                    writer.write("Server" + msg + "\n");
+                    writer.write("Server: " + msg + "\n");
                     writer.flush();
+                    // find if client quit
+                    if(QUIT.equals(msg)) {
+                        System.out.println("client[" + socket.getPort() + "] quit");
+                        break;
+                    }
                 }
             }
         } catch (IOException e) {
@@ -40,7 +46,7 @@ public class Server {
             if (serverSocket != null) {
                 try {
                     serverSocket.close();
-                    System.out.println("close serversocket");
+                    System.out.println("close serverSocket");
                 } catch (IOException e) {
                     e.printStackTrace();
                 }
