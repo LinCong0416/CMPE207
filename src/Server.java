@@ -40,6 +40,7 @@ public class Server {
             if (serverSocket != null) {
                 try {
                     serverSocket.close();
+                    System.out.println("close serversocket");
                 } catch (IOException e) {
                     e.printStackTrace();
                 }
