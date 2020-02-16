@@ -4,16 +4,20 @@ import java.io.*;
 import java.net.ServerSocket;
 import java.net.Socket;
 import java.util.*;
+import java.util.concurrent.ExecutorService;
+import java.util.concurrent.Executors;
 
 public class ChatServer {
 
     private int DEAFAULT_PORT = 8888;
     private final String QUIT = "quit";
 
+    private ExecutorService executorService;
     private ServerSocket serverSocket;
     private Map<Integer, Writer> connectedClients;
 
     public ChatServer() {
+        executorService = Executors.newFixedThreadPool(10);
         connectedClients = new HashMap<>();
     }
 
@@ -66,8 +70,8 @@ public class ChatServer {
 
             while (true) {
                 Socket socket = serverSocket.accept();
-                // build new threads
-                new Thread(new ChatHandler(this,socket)).start();
+                //new Thread(new ChatHandler(this,socket)).start();
+                executorService.execute(new ChatHandler(this,socket));
             }
         } catch (IOException e) {
             e.printStackTrace();

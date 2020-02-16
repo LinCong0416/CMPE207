@@ -2,12 +2,13 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="91e0ecac-c25b-46d5-9b86-9f6161cd8644" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/client/ChatClient.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/client/UserInputHandler.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/server/ChatHandler.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/server/ChatServer.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/vcs.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/c5/client/ChatClient.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/c5/client/ChatClient.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/c5/client/UserInputHandler.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/c5/client/UserInputHandler.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/client/ChatClient.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/client/ChatClient.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/client/UserInputHandler.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/client/UserInputHandler.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/server/ChatServer.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/server/ChatServer.java" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -17,16 +18,14 @@
     <option name="LAST_RESOLUTION" value="IGNORE" />
   </component>
   <component name="FileEditorManager">
-    <leaf>
+    <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
       <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/server/ChatServer.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="266">
-              <caret line="35" column="32" lean-forward="true" selection-start-line="35" selection-start-column="32" selection-end-line="35" selection-end-column="32" />
+            <state relative-caret-position="1065">
+              <caret line="73" column="67" selection-start-line="73" selection-start-column="67" selection-end-line="73" selection-end-column="67" />
               <folding>
                 <element signature="imports" expanded="true" />
-                <element signature="e#331#332#0" expanded="true" />
-                <element signature="e#381#382#0" expanded="true" />
               </folding>
             </state>
           </provider>
@@ -35,10 +34,26 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/client/ChatClient.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="285">
-              <caret line="19" column="25" selection-start-line="19" selection-start-column="25" selection-end-line="19" selection-end-column="25" />
+            <state relative-caret-position="134">
+              <caret line="9" column="39" selection-start-line="9" selection-start-column="39" selection-end-line="9" selection-end-column="39" />
               <folding>
                 <element signature="imports" expanded="true" />
+                <element signature="e#799#800#0" expanded="true" />
+                <element signature="e#838#839#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/client/UserInputHandler.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="60">
+              <caret line="5" column="13" selection-start-line="5" selection-start-column="13" selection-end-line="5" selection-end-column="13" />
+              <folding>
+                <element signature="imports" expanded="true" />
+                <element signature="e#202#203#0" expanded="true" />
+                <element signature="e#246#247#0" expanded="true" />
               </folding>
             </state>
           </provider>
@@ -54,15 +69,15 @@
     </option>
   </component>
   <component name="Git.Settings">
-    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/../.." />
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/.." />
   </component>
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
         <option value="$PROJECT_DIR$/src/server/ChatHandler.java" />
-        <option value="$PROJECT_DIR$/src/server/ChatServer.java" />
-        <option value="$PROJECT_DIR$/src/client/UserInputHandler.java" />
         <option value="$PROJECT_DIR$/src/client/ChatClient.java" />
+        <option value="$PROJECT_DIR$/src/client/UserInputHandler.java" />
+        <option value="$PROJECT_DIR$/src/server/ChatServer.java" />
       </list>
     </option>
   </component>
@@ -77,7 +92,6 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
-      <pane id="PackagesPane" />
       <pane id="ProjectPane">
         <subPane>
           <expand>
@@ -111,15 +125,23 @@
         </subPane>
       </pane>
       <pane id="Scope" />
+      <pane id="PackagesPane" />
     </panes>
   </component>
   <component name="PropertiesComponent">
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
-    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1581815675780" />
+    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1581824007623" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$" />
     <property name="nodejs_interpreter_path.stuck_in_default_project" value="undefined stuck path" />
     <property name="nodejs_npm_path_reset_for_default_project" value="true" />
+    <property name="nodejs_package_manager_path" value="npm" />
+    <property name="settings.editor.selected.configurable" value="project.propVCSSupport.Mappings" />
+  </component>
+  <component name="RunAnythingCache">
+    <option name="myCommands">
+      <command value="cd /Users/Lin/Documents/GitHub/CMPE207/c5/out/production/c5/client" />
+    </option>
   </component>
   <component name="RunDashboard">
     <option name="ruleStates">
@@ -179,26 +201,28 @@
       <updated>1581806545963</updated>
       <workItem from="1581806548016" duration="162000" />
       <workItem from="1581808388619" duration="6131000" />
+      <workItem from="1581815977825" duration="218000" />
+      <workItem from="1581816289887" duration="597000" />
+      <workItem from="1581821526422" duration="1263000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="6293000" />
+    <option name="totallyTimeSpent" value="8371000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="23" width="1280" height="777" extended-state="0" />
     <editor active="true" />
     <layout>
-      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.2536349" />
+      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.2657512" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Designer" order="2" />
       <window_info id="Image Layers" order="3" />
       <window_info id="Capture Tool" order="4" />
       <window_info id="UI Designer" order="5" />
       <window_info id="Favorites" order="6" side_tool="true" />
-      <window_info anchor="bottom" id="Messages" />
       <window_info anchor="bottom" id="Message" order="0" />
-      <window_info anchor="bottom" id="Find" order="1" />
+      <window_info anchor="bottom" id="Find" order="1" weight="0.329927" />
       <window_info anchor="bottom" id="Run" order="2" weight="0.329927" />
       <window_info anchor="bottom" id="Debug" order="3" weight="0.4" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
@@ -210,6 +234,7 @@
       <window_info anchor="bottom" id="Event Log" order="10" side_tool="true" />
       <window_info anchor="bottom" id="Database Changes" order="11" />
       <window_info anchor="bottom" id="Version Control" order="12" />
+      <window_info anchor="bottom" id="Messages" order="13" />
       <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
       <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
       <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
@@ -258,6 +283,11 @@
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="1" />
   </component>
+  <component name="VcsManagerConfiguration">
+    <ignored-roots>
+      <path value="$PROJECT_DIR$/../.." />
+    </ignored-roots>
+  </component>
   <component name="editorHistoryManager">
     <entry file="file://$PROJECT_DIR$/src/server/ChatHandler.java">
       <provider selected="true" editor-type-id="text-editor">
@@ -269,36 +299,38 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/src/client/ChatClient.class" />
+    <entry file="file://$PROJECT_DIR$/src/client/UserInputHandler.class" />
     <entry file="file://$PROJECT_DIR$/src/client/UserInputHandler.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="360">
-          <caret line="24" column="26" selection-start-line="24" selection-start-column="26" selection-end-line="24" selection-end-column="26" />
+        <state relative-caret-position="60">
+          <caret line="5" column="13" selection-start-line="5" selection-start-column="13" selection-end-line="5" selection-end-column="13" />
           <folding>
             <element signature="imports" expanded="true" />
-            <element signature="e#164#165#0" expanded="true" />
-            <element signature="e#207#208#0" expanded="true" />
+            <element signature="e#202#203#0" expanded="true" />
+            <element signature="e#246#247#0" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/client/ChatClient.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="285">
-          <caret line="19" column="25" selection-start-line="19" selection-start-column="25" selection-end-line="19" selection-end-column="25" />
+        <state relative-caret-position="134">
+          <caret line="9" column="39" selection-start-line="9" selection-start-column="39" selection-end-line="9" selection-end-column="39" />
           <folding>
             <element signature="imports" expanded="true" />
+            <element signature="e#799#800#0" expanded="true" />
+            <element signature="e#838#839#0" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/server/ChatServer.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="266">
-          <caret line="35" column="32" lean-forward="true" selection-start-line="35" selection-start-column="32" selection-end-line="35" selection-end-column="32" />
+        <state relative-caret-position="1065">
+          <caret line="73" column="67" selection-start-line="73" selection-start-column="67" selection-end-line="73" selection-end-column="67" />
           <folding>
             <element signature="imports" expanded="true" />
-            <element signature="e#331#332#0" expanded="true" />
-            <element signature="e#381#382#0" expanded="true" />
           </folding>
         </state>
       </provider>
