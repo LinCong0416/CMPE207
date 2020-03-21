@@ -2,6 +2,7 @@
 <project version="4">
   <component name="ProjectModuleManager">
     <modules>
+      <module fileurl="file://$PROJECT_DIR$/.idea/CMPE207.iml" filepath="$PROJECT_DIR$/.idea/CMPE207.iml" />
       <module fileurl="file://$PROJECT_DIR$/c7.iml" filepath="$PROJECT_DIR$/c7.iml" />
     </modules>
   </component>
