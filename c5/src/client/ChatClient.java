@@ -13,7 +13,7 @@ public class ChatClient {
     private BufferedReader reader;
     private BufferedWriter writer;
 
-    // 发送消息给服务器
+
     public void send(String msg) throws IOException {
         if (!socket.isOutputShutdown()) {
             writer.write(msg + "\n");
@@ -21,7 +21,7 @@ public class ChatClient {
         }
     }
 
-    // 从服务器接收消息
+
     public String receive() throws IOException {
         String msg = null;
         if (!socket.isInputShutdown()) {
@@ -30,7 +30,7 @@ public class ChatClient {
         return msg;
     }
 
-    // 检查用户是否准备退出
+
     public boolean readyToQuit(String msg) {
         return QUIT.equals(msg);
     }
@@ -38,7 +38,7 @@ public class ChatClient {
     public void close() {
         if (writer != null) {
             try {
-                System.out.println("关闭socket");
+                System.out.println("close socket");
                 writer.close();
             } catch (IOException e) {
                 e.printStackTrace();
@@ -49,10 +49,8 @@ public class ChatClient {
     public void start() {
 
         try {
-            // 创建socket
             socket = new Socket(DEFAULT_SERVER_HOST, DEFAULT_SERVER_PORT);
 
-            // 创建IO流
             reader = new BufferedReader(
                     new InputStreamReader(socket.getInputStream())
             );
@@ -60,10 +58,8 @@ public class ChatClient {
                     new OutputStreamWriter(socket.getOutputStream())
             );
 
-            // 处理用户的输入
             new Thread(new UserInputHandler(this)).start();
 
-            // 读取服务器转发的消息
             String msg = null;
             while ((msg = receive()) != null) {
                 System.out.println(msg);

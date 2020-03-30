@@ -30,7 +30,7 @@ public class ChatServer {
         return QUIT.equals(msg);
     }
 
-    //synchronized 保证同一时间只有一个线程向map中添加元素
+
     public synchronized void addClient(Socket socket) throws IOException {
         if (socket != null) {
             int port = socket.getPort();

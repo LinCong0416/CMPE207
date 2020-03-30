@@ -1,0 +1,91 @@
+<html>
+<head>
+    <title>Chat room</title>
+    <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+</head>
+<body>
+<div id="app">
+
+    name: <input v-model="nickname" type="text">
+    <button v-on:click="start">set name and start</button>
+    <br>
+    <textarea v-model="history" name="" id="" cols="120" rows="40">
+
+    </textarea>
+    <br>
+
+    <select v-model="target">
+        <option value="all">all</option>
+        <option v-for="u in online_users" v-bind:value="u">{{u}}</option>
+    </select>
+    <input type="text" v-model="content" size="100" @focus="iamtyping">
+    <button v-on:click="send">send</button>
+
+    <hr>
+    <h4>online users</h4>
+    <ul>
+        <li v-for="u in online_users">{{u}}</li>
+    </ul>
+</div>
+
+<script>
+    var app = new Vue({
+        el: '#app',
+        data: {
+            message: 'Hello Vue!',
+            online_users: [],
+            target: "all",
+            nickname: "",
+            history: "",
+            content: "",
+        },
+        methods: {
+            start: function () {
+                if(this.nickname.length === 0){
+                    alert("set a name please");
+                }else{
+                    this.initWS();
+
+                }
+            },
+            send: function(){
+                let t = this.target=="all"? "msg_all":"msg_one";
+                this.ws.send(JSON.stringify({"type":t,  "name": this.nickname,
+                    "content":this.content, "target": this.target}))
+                this.history += "                                          I said: "+this.content+"\n"
+            },
+            iamtyping: function(){
+                this.ws.send(JSON.stringify({"type":"typing",  "name": this.nickname,
+                   }))
+            },
+            initWS: function () {
+                this.ws = new WebSocket("ws://"+window.location.host+"/ws");
+                this.ws.onmessage = this.wsonmessage;
+                this.ws.onopen = this.wsonopen;
+                // this.ws.onerror = this.wsonerror;
+                this.ws.onclose = this.wsclose;
+            },
+            wsonopen: function () {
+                this.ws.send(JSON.stringify({"type": "set_name", "name": this.nickname}))
+
+            },
+            wsclose: function (e) {
+
+            },
+            wsonmessage: function (e) {
+                self.history += "new message";
+                let data = JSON.parse(e.data);
+                console.log(data)
+                console.log(data['userlist'] === undefined);
+                if(data['userlist'] === undefined){
+                    this.history += data['message'] +"\n";
+                }else{
+                    this.online_users = data['userlist'];
+                }
+            }
+        }
+    })
+    
+</script>
+</body>
+</html>
